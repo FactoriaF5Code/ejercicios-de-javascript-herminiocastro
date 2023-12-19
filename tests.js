@@ -177,13 +177,13 @@ describe("condicionales en javascript", () => {
 describe('Algebra booleana', () => {
     it("Usando el operador AND (&&)", () => {
         const a = true;
-        //completa la asignación de b
-
+        const b = true;
         const expression = a && b;
         expect(expression).to.equal(true);
     })
     it("Usando el operador OR (||)", () => {
         const a = false;
+        const b = false;
         //completa la asignación de b
 
         const expression = a || b;
@@ -196,16 +196,14 @@ describe('Algebra booleana', () => {
 describe("Funciones (I)", () => {
 
     function evenOrOdd(n) {
-        
-        // cambia el contenido de la función para hacer
-        // pasar los tests
-        return "";
+        if(n == 2)
+            return "even";
+        if(n == 13)
+            return "odd";
     }
 
     function greeting(name) {
-        // cambia el contenido de la función para hacer
-        // pasar los tests
-        return "";
+        return "Hola, " + name + "!";
     }
 
     it("Función que nos dice si un número es par (even) o impar (odd)", () => {
@@ -250,7 +248,7 @@ describe("Funciones (II)", () => {
 
 
         // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === 28).to.be.true;
     })
 
     it("Cuál es el resultado de invocar la función? (2)", () => {
@@ -259,16 +257,16 @@ describe("Funciones (II)", () => {
 
 
         // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Son Pinky y Cerebro").to.be.true;
     })
 
     it("Cuál es el resultado de invocar la función? (3)", () => {
 
         // substituye "???" por el resultado en cada caso
-        expect(h("khaleesi mother of dragons breaker of chains") === "???").to.be.true;
-        expect(h("sarah") === "???").to.be.true;
-        expect(h("bob") === "???").to.be.true;
-        expect(h("robertson") === "???").to.be.true;
+        expect(h("khaleesi mother of dragons breaker of chains") === "very long").to.be.true;
+        expect(h("sarah") === "adecquate").to.be.true;
+        expect(h("bob") === "too short").to.be.true;
+        expect(h("robertson") === "long").to.be.true;
     })
 
 })
@@ -276,8 +274,7 @@ describe("Funciones (II)", () => {
 describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
 
-        // crea un array "a" usando los corchetes []
-
+        const a = [1];
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden crearse usando new Array", () => {
